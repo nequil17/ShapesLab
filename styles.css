@@ -40,3 +40,30 @@
     border-radius: 50%;
     position: absolute;
 }
+
+.feedback{
+    background-color: lightgray;
+    height: 14em;
+    width: 64em;
+    float: right;
+    margin-right: 12.5em;
+    padding: 1em;
+    margin-top: 4em;
+    border: 5px solid yellow;
+    border-radius: 10px 10px;
+    box-shadow: 0 0 0 3px darkgray,
+    
+}
+.innerfeed1{
+   float:left;
+   height: 15%;
+   width: 45%;
+   background-color: lightgray
+
+}
+.innerfeed2{
+ float:right; 
+ height: 15%;
+ width: 45%;
+ background-color: lightgray
+}
