@@ -1,0 +1,18 @@
+#inputcss {
+    background-color: yellow;
+    width: 250px;
+    height: 390px;
+    border: 2px solid black;
+    float: left;
+}
+
+#boxcolor {
+    height: 600px;
+    width: 600px;
+    float: right;
+    background-color: lightgrey;
+}
+
+.square {
+    background-color: red;
+}
