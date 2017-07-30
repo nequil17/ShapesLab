@@ -1,3 +1,8 @@
+.field {
+    position: relative;
+    overflow: hidden;
+}
+
 #inputcss {
     background-color: yellow;
     width: 250px;
@@ -15,4 +20,22 @@
 
 .square {
     background-color: red;
+    position: absolute;
+}
+
+.rectangle {
+    background-color: green;
+    position: absolute;
+}
+
+.triangle {
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+.circle {
+    background-color: purple;
+    border-radius: 50%;
+    position: absolute;
 }
