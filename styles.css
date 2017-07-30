@@ -6,9 +6,10 @@
 #inputcss {
     background-color: yellow;
     width: 250px;
-    height: 390px;
+    height: 600px;
     border: 2px solid black;
     float: left;
+    text-align: center;
 }
 
 #boxcolor {
