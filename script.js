@@ -43,7 +43,15 @@ class Shape {
 
     }
 
+}
 
+Shape.prototype.describe = function() {
+    $('#shape').text("Shape Name: " + this.shape.className)
+    $('#height').text("Height: " +this.height)
+    $('#width').text("Width: " +this.width)
+    $('#area').text("Area: " +this.area)
+    $('#perimeter').text("Perimeter: " +this.perimeter)
+    $('#radius').text("Radius: " +this.radius)
 }
 
 class Square extends Shape {
@@ -53,24 +61,24 @@ class Square extends Shape {
         this.shape.style.height = squareSide.value + 'px';
         this.draw();
     }
-    get Radius() {
-
+    get radius() {
+        return "N/A"
     }
 
-    get Area() {
-
+    get area() {
+        return Math.round(Math.pow(squareSide.value, 2)) + 'px'
     }
 
-    get Perimeter() {
-
+    get perimeter() {
+        return Math.round(4*squareSide.value) + 'px'
     }
 
-    get Height() {
-    return squareSide.value
+    get height() {
+    return squareSide.value + 'px'
     }
 
-    get Width() {
-    return squareSide.value
+    get width() {
+    return squareSide.value + 'px'
     }
 }
 
@@ -85,26 +93,26 @@ class Rectangle extends Shape {
         this.shape.style.height = recHeight.value + 'px';
         this.draw();
     }
-get Radius() {
 
-}
+    get radius() {
+        return "N/A"
+    }
 
-get Area() {
+    get area() {
+        return Math.round(recWidth.value * recHeight.value) + 'px'
+    }
 
-}
+    get perimeter() {
+        return Math.round(2*(recWidth.value * recHeight.value)) + 'px'
+    }
 
-get Perimeter() {
+    get height() {
+    return recHeight.value + 'px'
+    }
 
-}
-
-get Height() {
-    return recHeight.value
-}
-
-get Width() {
-    return recWidth.value
-}
-
+    get width() {
+    return recWidth.value + 'px'
+    }
 
 }
 
@@ -120,24 +128,24 @@ class Circle extends Shape {
         this.draw();
     }
 
-    get Radius() {
-        return cirRad.value
+    get radius() {
+        return cirRad.value + 'px'
     }
 
-    get Area() {
-
+    get area() {
+        return Math.round(Math.PI*(Math.pow(cirRad.value, 2))) + 'px'
     }
 
-    get Perimeter() {
-
+    get perimeter() {
+        return Math.round(cirRad.value*2*Math.PI) + 'px'
     }
 
-    get Height() {
-    
+    get height() {
+     return "N/A"
     }
 
-    get Width() {
-    
+    get width() {
+     return "N/A"
     }
 }
 
@@ -153,24 +161,24 @@ class Triangle extends Shape {
         this.shape.style.borderRight = triSide.value + 'px solid transparent';
         this.draw();
     }
-    get Radius() {
-
+    get radius() {
+        return "N/A"
     }
 
-    get Area() {
-        return triSide.value + triside.value
+    get area() {
+        return Math.round(0.5*(triSide.value*2)) + 'px'
     }
 
-    get Perimeter() {
-
+    get perimeter() {
+        return Math.round(triSide.value*3) + 'px'
     }
 
-    get Height() {
-    
+    get height() {
+     return triSide.value + 'px'
     }
 
-    get Width() {
-    
+    get width() {
+     return triSide.value + 'px'
     }
 }
 
@@ -187,14 +195,6 @@ function getRandomPosition (elem) {
     elem.style.top = randomY;
 }
 
-Shape.prototype.describe = function() {
-    $('#shape').text("Shape Name: " + this.shape.className)
-    $('#height').text("Height: " + this.height)
-    $('#width').text("Width: " + this.width)
-    $('#area').text("Area: " + this.area)
-    $('#perimeter').text("Perimeter: " + this.perimeter)
-    $('#radius').text("Radius: " + this.radius)
-}
 
 // document.addEventListener('DOMContentLoaded', function() {
 
