@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 class Shape {
   constructor(type) {
-        this.shape = document.createElement('div');
-        this.shape.className = type;
-        this.shape.addEventListener('dblclick', this.removeShape.bind(this));
-        this.shape.addEventListener('click', this.describe.bind(this));
+    this.shape = document.createElement('div');
+    this.shape.className = type;
+    this.shape.addEventListener('dblclick', this.removeShape.bind(this));
+    this.shape.addEventListener('click', this.describe.bind(this));
   }
 
     draw() {
@@ -33,16 +33,14 @@ class Shape {
     }
 
     removeShape() {
-    this.shape.remove();
-    $('#shape').text("Shape Name: ")
-    $('#height').text("Height: ")
-    $('#width').text("Width: " )
-    $('#area').text("Area: ")
-    $('#perimeter').text("Perimeter: ")
-    $('#radius').text("Radius: ")
-
+        this.shape.remove();
+        $('#shape').text("Shape Name: ")
+        $('#height').text("Height: ")
+        $('#width').text("Width: " )
+        $('#area').text("Area: ")
+        $('#perimeter').text("Perimeter: ")
+        $('#radius').text("Radius: ")
     }
-
 }
 
 Shape.prototype.describe = function() {
@@ -61,6 +59,7 @@ class Square extends Shape {
         this.shape.style.height = squareSide.value + 'px';
         this.draw();
     }
+
     get radius() {
         return "N/A"
     }
@@ -161,6 +160,7 @@ class Triangle extends Shape {
         this.shape.style.borderRight = triSide.value + 'px solid transparent';
         this.draw();
     }
+    
     get radius() {
         return "N/A"
     }
