@@ -22,7 +22,7 @@ class Shape {
   constructor(type) {
     this.shape = document.createElement('div');
     this.shape.className = type;
-    this.shape.addEventListener('dblclick', this.removeShape.bind(this));
+    this.shape.addEventListener('dblclick', this.shape.remove);
     this.shape.addEventListener('click', this.describe.bind(this));
   }
 
@@ -31,25 +31,15 @@ class Shape {
         console.log('im a: ' + this.shape.className);
         getRandomPosition(this.shape);
     }
-
-    removeShape() {
-        this.shape.remove();
-        $('#shape').text("Shape Name: ")
-        $('#height').text("Height: ")
-        $('#width').text("Width: " )
-        $('#area').text("Area: ")
-        $('#perimeter').text("Perimeter: ")
-        $('#radius').text("Radius: ")
-    }
 }
 
 Shape.prototype.describe = function() {
     $('#shape').text("Shape Name: " + this.shape.className)
-    $('#height').text("Height: " +this.height)
-    $('#width').text("Width: " +this.width)
-    $('#area').text("Area: " +this.area)
-    $('#perimeter').text("Perimeter: " +this.perimeter)
-    $('#radius').text("Radius: " +this.radius)
+    $('#height').text("Height: " + this.height)
+    $('#width').text("Width: " + this.width)
+    $('#area').text("Area: " + this.area)
+    $('#perimeter').text("Perimeter: " + this.perimeter)
+    $('#radius').text("Radius: " + this.radius)
 }
 
 class Square extends Shape {
