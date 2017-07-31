@@ -56,7 +56,7 @@ Shape.prototype.describe = function() {
 
 class Square extends Shape {
     constructor() {
-        super('square');
+        super('Square');
         this.shape.style.width = squareSide.value + 'px';
         this.shape.style.height = squareSide.value + 'px';
         this.draw();
@@ -88,7 +88,7 @@ const makeSquare = () => {
 
 class Rectangle extends Shape {
     constructor() {
-        super('rectangle');
+        super('Rectangle');
         this.shape.style.width = recWidth.value + 'px';
         this.shape.style.height = recHeight.value + 'px';
         this.draw();
@@ -122,7 +122,7 @@ const makeRectangle = () => {
 
 class Circle extends Shape {
     constructor() {
-        super('circle');
+        super('Circle');
         this.shape.style.height = cirRad.value + 'px';
         this.shape.style.width = cirRad.value + 'px';
         this.draw();
@@ -155,7 +155,7 @@ const makeCircle = () => {
 
 class Triangle extends Shape {
     constructor() {
-        super('triangle');
+        super('Triangle');
         this.shape.style.borderBottom = triSide.value + 'px solid yellow';
         this.shape.style.borderTop = triSide.value + 'px solid transparent';
         this.shape.style.borderRight = triSide.value + 'px solid transparent';
